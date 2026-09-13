@@ -4,6 +4,7 @@ Prototype fonctionnel d'une interface de diagnostic pour les MPME, réalisé dan
 l'**exercice de sélection Développeur ALODO TECH**.
 
 Dépôt : `ALODO-MPME-CHALLENGE-PRIMAEL-BANKOLE`
+Démo : https://alodo-mpme-challenge-primael-bankol.vercel.app/
 
 ---
 
