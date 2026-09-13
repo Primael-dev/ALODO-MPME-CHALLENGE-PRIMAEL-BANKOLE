@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* Animations légères et réutilisables (design minimal, fluide). */
+@keyframes alodo-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes alodo-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes alodo-grow-x {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes alodo-ring {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: var(--ring-offset);
+  }
+}
+
+.animate-fade-up {
+  animation: alodo-fade-up 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-in {
+  animation: alodo-fade-in 0.4s ease-out both;
+}
+
+.animate-grow-x {
+  transform-origin: left;
+  animation: alodo-grow-x 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-ring {
+  animation: alodo-ring 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Respecte la préférence système de réduction des animations. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-in,
+  .animate-grow-x,
+  .animate-ring {
+    animation: none;
+  }
+}
